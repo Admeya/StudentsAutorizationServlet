@@ -10,7 +10,7 @@
 <%request.setCharacterEncoding("UTF-8");%>
 <html>
   <head>
-    <title>Edit student</title>
+      <title>Add student</title>
   </head>
   <body>
   <h1>Edit Student</h1>

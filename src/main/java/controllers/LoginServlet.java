@@ -35,7 +35,7 @@ public class LoginServlet extends HttpServlet {
         try {
             if(UserService.authorize(login, password)){
                 logger.trace("true");
-                resp.sendRedirect("/students/list");
+                resp.sendRedirect("/students/listLection");
             }else{
                 logger.trace("false");
                 req.getRequestDispatcher("login.jsp").forward(req, resp);
