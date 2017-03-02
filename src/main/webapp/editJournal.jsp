@@ -14,7 +14,7 @@
 <body>
 
 <h1>Edit lections. Journal</h1>
-
+<a href="/students/logout">Выход</a>
 <form action="/students/editJournal" method="post">
     <input type="hidden" name="journalID" id="journalID" value="${Journal.id}">
     <table border="1">
@@ -38,6 +38,7 @@
         </tr>
     </table>
     <input type="submit" value="Редактировать" formmethod="post">
+    <input type="button" value="Назад" onclick="history.back()">
 </form>
 
 

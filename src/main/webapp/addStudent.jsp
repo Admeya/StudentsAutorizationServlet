@@ -13,6 +13,7 @@
       <title>Add student</title>
   </head>
   <body>
+  <a href="/students/logout">Выход</a>
   <h1>Edit Student</h1>
   <form action="/students/add" method="post">
     <table border="1">
@@ -30,6 +31,7 @@
       </tr>
     </table>
     <input type="submit" value="Добавить" formmethod="post">
+      <input type="button" value="Назад" onclick="history.back()">
   </form>
   </body>
 </html>

@@ -12,7 +12,7 @@
     <title>Journal</title>
 </head>
 <body>
-
+<a href="/students/logout">Выход</a>
 <h1>List of lections. Journal</h1>
 <table border="1">
     <tr>
@@ -41,6 +41,7 @@
 </table>
 <form action="/students/addJournal.jsp" method="post">
     <input type="submit" value="Добавить" formmethod="post">
+    <input type="button" value="Назад" onclick="history.back()">
 </form>
 
 

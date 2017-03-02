@@ -3,14 +3,14 @@
          xmlns="http://xmlns.jcp.org/xml/ns/javaee"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
-    <!--
+
     <welcome-file-list>
         <welcome-file>login.jsp</welcome-file>
-    </welcome-file-list>-->
+    </welcome-file-list>
 
     <servlet>
         <servlet-name>Login</servlet-name>
-        <servlet-class>controllers.LoginServlet</servlet-class>
+        <servlet-class>ru.students.spring.controllers.LoginServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
@@ -19,7 +19,7 @@
 
     <servlet>
         <servlet-name>Registration</servlet-name>
-        <servlet-class>controllers.RegistrationServlet</servlet-class>
+        <servlet-class>ru.students.spring.controllers.RegistrationServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>Registration</servlet-name>
@@ -28,7 +28,7 @@
 
     <servlet>
         <servlet-name>List</servlet-name>
-        <servlet-class>controllers.ListServlet</servlet-class>
+        <servlet-class>ru.students.spring.controllers.ListServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>List</servlet-name>
@@ -37,7 +37,7 @@
 
     <servlet>
         <servlet-name>ListLection</servlet-name>
-        <servlet-class>controllers.ListLectionServlet</servlet-class>
+        <servlet-class>ru.students.spring.controllers.ListLectionServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>ListLection</servlet-name>
@@ -47,7 +47,7 @@
 
     <servlet>
         <servlet-name>Edit</servlet-name>
-        <servlet-class>controllers.EditServlet</servlet-class>
+        <servlet-class>ru.students.spring.controllers.EditServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>Edit</servlet-name>
@@ -56,7 +56,7 @@
 
     <servlet>
         <servlet-name>EditJournal</servlet-name>
-        <servlet-class>controllers.EditJournalServlet</servlet-class>
+        <servlet-class>ru.students.spring.controllers.EditJournalServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>EditJournal</servlet-name>
@@ -65,7 +65,7 @@
 
     <servlet>
         <servlet-name>Add</servlet-name>
-        <servlet-class>controllers.AddServlet</servlet-class>
+        <servlet-class>ru.students.spring.controllers.AddServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>Add</servlet-name>
@@ -74,7 +74,7 @@
 
     <servlet>
         <servlet-name>AddJournal</servlet-name>
-        <servlet-class>controllers.AddJournalServlet</servlet-class>
+        <servlet-class>ru.students.spring.controllers.AddJournalServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>AddJournal</servlet-name>
@@ -82,9 +82,19 @@
     </servlet-mapping>
 
     <listener>
-        <listener-class>controllers.listeners.ApplicationLoadListener</listener-class>
+        <listener-class>ru.students.spring.controllers.listeners.ApplicationLoadListener</listener-class>
     </listener>
     <listener>
-        <listener-class>controllers.listeners.SessionListener</listener-class>
+        <listener-class>ru.students.spring.controllers.listeners.SessionListener</listener-class>
     </listener>
+
+    <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
+
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>beans.xml</param-value>
+    </context-param>
+
 </web-app>
