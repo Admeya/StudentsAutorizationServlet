@@ -30,12 +30,12 @@
             <td><c:out value="${students.name}"></c:out></td>
             <td><c:out value="${students.age}"></c:out></td>
             <td><c:out value="${students.id_group}"></c:out></td>
-            <td><a href="/students/edit?idStudent=${students.id}">Редактировать </a><a
+            <td><a href="/students/editStudent?idStudent=${students.id}">Редактировать </a><a
                     href="/students/list?idStudent=${students.id}">Удалить</a></td>
         </tr>
     </c:forEach>
 </table>
-<form action="/students/addStudent.jsp" method="post">
+<form action="/students/viewFormAddStudent" method="post">
     <input type="submit" value="add student" formmethod="post">
     <input type="button" value="Назад" onclick="history.back()">
 </form>

@@ -18,4 +18,5 @@ dependencies {
     compile 'log4j:log4j:1.2.17'
     compile group: 'org.springframework', name: 'spring-context', version: '4.3.5.RELEASE'
     compile group: 'org.springframework', name: 'spring-web', version: '4.3.5.RELEASE'
+    compile group: 'org.springframework', name: 'spring-webmvc', version: '4.3.5.RELEASE'
 }

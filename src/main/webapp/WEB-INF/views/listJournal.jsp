@@ -39,7 +39,7 @@
         </tr>
     </c:forEach>
 </table>
-<form action="/students/addJournal.jsp" method="post">
+<form action="/students/viewFormAddJournal" method="post">
     <input type="submit" value="Добавить" formmethod="post">
     <input type="button" value="Назад" onclick="history.back()">
 </form>
