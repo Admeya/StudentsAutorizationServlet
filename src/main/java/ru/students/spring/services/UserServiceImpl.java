@@ -6,6 +6,7 @@ import ru.students.spring.exceptions.UserDAOException;
 import ru.students.spring.models.DAO.UserDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import ru.students.spring.models.POJO.User;
 
 import java.util.Random;
 
@@ -13,7 +14,6 @@ import java.util.Random;
  * Created by Ирина on 23.02.2017.
  */
 @Service
-//@Scope() //ConfigurableBeanFactory.SCOPE_PROTOTYPE
 public class UserServiceImpl implements IUserService {
     private UserDAO userDAO;
     private int anInt = 0;
@@ -37,5 +37,9 @@ public class UserServiceImpl implements IUserService {
 
     public boolean registration(String login, String password) {
         return userDAO.registrationUser(login, password);
+    }
+
+    public User authorize(String login) {
+        return userDAO.getUserByLogin(login);
     }
 }

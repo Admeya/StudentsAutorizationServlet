@@ -1,5 +1,7 @@
 package ru.students.spring.models.POJO;
 
+import org.springframework.security.core.GrantedAuthority;
+
 /**
  * Created by Ирина on 23.02.2017.
  */
@@ -16,7 +18,7 @@ public class User {
         this.role = role;
     }
 
-    public User() {
+    public User(String username, String password, boolean b, boolean b1, boolean b2, boolean b3, GrantedAuthority[] role_users) {
     }
 
     public int getId() {
