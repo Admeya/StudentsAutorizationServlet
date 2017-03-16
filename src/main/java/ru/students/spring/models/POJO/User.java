@@ -2,13 +2,26 @@ package ru.students.spring.models.POJO;
 
 import org.springframework.security.core.GrantedAuthority;
 
+import javax.persistence.*;
+
 /**
  * Created by Ирина on 23.02.2017.
  */
+@Entity
+@Table(name = "user", schema = "public")
 public class User {
+    @Id
+    @GeneratedValue
+    @Column(name = "id_user")
     private int id;
+
+    @Column
     private String login;
+
+    @Column
     private String password;
+
+    @Column
     private String role;
 
     public User(int id, String login, String password, String role) {
@@ -19,6 +32,9 @@ public class User {
     }
 
     public User(String username, String password, boolean b, boolean b1, boolean b2, boolean b3, GrantedAuthority[] role_users) {
+    }
+
+    public User() {
     }
 
     public int getId() {

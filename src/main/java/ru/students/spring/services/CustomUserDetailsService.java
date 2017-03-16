@@ -6,6 +6,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
+import ru.students.spring.exceptions.UserDAOException;
 import ru.students.spring.models.POJO.User;
 
 import java.util.ArrayList;
@@ -27,7 +28,12 @@ public class CustomUserDetailsService implements UserDetailsService {
     public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
         System.out.println("Login is " + s);
 
-        User newUser = userService.authorize(s);
+        User newUser = null;
+        try {
+            newUser = userService.authorize(s);
+        } catch (UserDAOException e) {
+            e.printStackTrace();
+        }
         System.out.println(newUser.getLogin() + " " + newUser.getPassword());
         if (newUser == null) {
             throw new UsernameNotFoundException("User details not found with this username: " + s);

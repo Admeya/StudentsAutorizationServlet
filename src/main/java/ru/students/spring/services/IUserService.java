@@ -11,5 +11,5 @@ public interface IUserService {
 
     boolean registration(String login, String password);
 
-    User authorize(String login);
+    User authorize(String login) throws UserDAOException;
 }

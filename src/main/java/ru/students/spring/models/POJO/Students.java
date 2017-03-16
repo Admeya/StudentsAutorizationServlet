@@ -1,12 +1,22 @@
 package ru.students.spring.models.POJO;
 
+
+import javax.persistence.*;
+
 /**
  * Created by Ирина on 22.02.2017.
  */
+@Entity
+@Table(name = "student")
 public class Students {
+    @Id
+    @GeneratedValue
     public int id;
+    @Column
     public String name;
+    @Column
     public int age;
+
     public int id_group;
 
     public Students(int id, String name, int age, int id_group) {
